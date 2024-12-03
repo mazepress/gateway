@@ -5,12 +5,21 @@
  * @package Mazepress\Gateway
  */
 
+declare(strict_types=1);
+
 namespace Mazepress\Gateway;
 
 /**
  * The CreditCard class.
  */
 class CreditCard {
+
+	/**
+	 * The card type.
+	 *
+	 * @var string $type
+	 */
+	private $type;
 
 	/**
 	 * The name.
@@ -39,6 +48,27 @@ class CreditCard {
 	 * @var string $cvv
 	 */
 	private $cvv;
+
+	/**
+	 * Get the card type.
+	 *
+	 * @return string|null
+	 */
+	public function get_type(): ?string {
+		return $this->type;
+	}
+
+	/**
+	 * Set the card type.
+	 *
+	 * @param string $type The card type.
+	 *
+	 * @return self
+	 */
+	public function set_type( string $type ): self {
+		$this->type = $type;
+		return $this;
+	}
 
 	/**
 	 * Get the name.

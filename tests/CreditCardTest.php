@@ -28,6 +28,9 @@ class CreditCardTest extends TestCase {
 
 		$object = new CreditCard();
 
+		$this->assertInstanceOf( CreditCard::class, $object->set_type( 'visa' ) );
+		$this->assertEquals( 'visa', $object->get_type() );
+
 		$this->assertInstanceOf( CreditCard::class, $object->set_name( 'fullname' ) );
 		$this->assertEquals( 'fullname', $object->get_name() );
 

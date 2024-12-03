@@ -5,6 +5,8 @@
  * @package Mazepress\Gateway
  */
 
+declare(strict_types=1);
+
 namespace Mazepress\Gateway;
 
 /**

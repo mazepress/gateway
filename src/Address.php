@@ -1,16 +1,18 @@
 <?php
 /**
- * The BillingAddress class file.
+ * The Address class file.
  *
  * @package Mazepress\Gateway
  */
 
+declare(strict_types=1);
+
 namespace Mazepress\Gateway;
 
 /**
- * The BillingAddress class.
+ * The Address class.
  */
-class BillingAddress {
+class Address {
 
 	/**
 	 * The first name.
@@ -41,11 +43,18 @@ class BillingAddress {
 	private $phone;
 
 	/**
-	 * The address.
+	 * The street address.
 	 *
-	 * @var string $address
+	 * @var string $address1
 	 */
-	private $address;
+	private $address1;
+
+	/**
+	 * The address line 2.
+	 *
+	 * @var string $address2
+	 */
+	private $address2;
 
 	/**
 	 * The city.
@@ -55,18 +64,18 @@ class BillingAddress {
 	private $city;
 
 	/**
-	 * The parish.
+	 * The state.
 	 *
-	 * @var string $parish
+	 * @var string $state
 	 */
-	private $parish;
+	private $state;
 
 	/**
-	 * The postal.
+	 * The zip.
 	 *
-	 * @var string $postal
+	 * @var string $zip
 	 */
-	private $postal;
+	private $zip;
 
 	/**
 	 * The country.
@@ -74,6 +83,13 @@ class BillingAddress {
 	 * @var string $country
 	 */
 	private $country;
+
+	/**
+	 * The country code.
+	 *
+	 * @var string $country_code
+	 */
+	private $country_code;
 
 	/**
 	 * Get the first name.
@@ -160,23 +176,44 @@ class BillingAddress {
 	}
 
 	/**
-	 * Get the address.
+	 * Get the address1.
 	 *
 	 * @return string|null
 	 */
-	public function get_address(): ?string {
-		return $this->address;
+	public function get_address1(): ?string {
+		return $this->address1;
 	}
 
 	/**
-	 * Set the address.
+	 * Set the address1.
 	 *
 	 * @param string $address The address.
 	 *
 	 * @return self
 	 */
-	public function set_address( string $address ): self {
-		$this->address = $address;
+	public function set_address1( string $address ): self {
+		$this->address1 = $address;
+		return $this;
+	}
+
+	/**
+	 * Get the address2.
+	 *
+	 * @return string|null
+	 */
+	public function get_address2(): ?string {
+		return $this->address2;
+	}
+
+	/**
+	 * Set the address2.
+	 *
+	 * @param string $address The address.
+	 *
+	 * @return self
+	 */
+	public function set_address2( string $address ): self {
+		$this->address2 = $address;
 		return $this;
 	}
 
@@ -202,44 +239,44 @@ class BillingAddress {
 	}
 
 	/**
-	 * Get the parish.
+	 * Get the state.
 	 *
 	 * @return string|null
 	 */
-	public function get_parish(): ?string {
-		return $this->parish;
+	public function get_state(): ?string {
+		return $this->state;
 	}
 
 	/**
-	 * Set the parish.
+	 * Set the state.
 	 *
-	 * @param string $parish The parish.
+	 * @param string $state The state.
 	 *
 	 * @return self
 	 */
-	public function set_parish( string $parish ): self {
-		$this->parish = $parish;
+	public function set_state( string $state ): self {
+		$this->state = $state;
 		return $this;
 	}
 
 	/**
-	 * Get the postal.
+	 * Get the zip.
 	 *
 	 * @return string|null
 	 */
-	public function get_postal(): ?string {
-		return $this->postal;
+	public function get_zip(): ?string {
+		return $this->zip;
 	}
 
 	/**
-	 * Set the postal.
+	 * Set the zip.
 	 *
-	 * @param string $postal The postal.
+	 * @param string $zip The zip.
 	 *
 	 * @return self
 	 */
-	public function set_postal( string $postal ): self {
-		$this->postal = $postal;
+	public function set_zip( string $zip ): self {
+		$this->zip = $zip;
 		return $this;
 	}
 
@@ -261,6 +298,27 @@ class BillingAddress {
 	 */
 	public function set_country( string $country ): self {
 		$this->country = $country;
+		return $this;
+	}
+
+	/**
+	 * Get the country code.
+	 *
+	 * @return string|null
+	 */
+	public function get_country_code(): ?string {
+		return $this->country_code;
+	}
+
+	/**
+	 * Set the country code.
+	 *
+	 * @param string $country_code The country code.
+	 *
+	 * @return self
+	 */
+	public function set_country_code( string $country_code ): self {
+		$this->country_code = $country_code;
 		return $this;
 	}
 }
