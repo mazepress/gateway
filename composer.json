@@ -42,10 +42,5 @@
 			"composer/installers": true,
 			"dealerdirect/phpcodesniffer-composer-installer": true
 		}
-	},
-	"extra": {
-		"installer-paths": {
-			"packages/{$name}/": ["type:wordpress-plugin"]
-		}
 	}
 }
