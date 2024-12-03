@@ -47,6 +47,13 @@ abstract class Payment {
 	private $currency_code = '840';
 
 	/**
+	 * The currency exponent.
+	 *
+	 * @var int $currency_exponent
+	 */
+	private $currency_exponent = 2;
+
+	/**
 	 * The billing address.
 	 *
 	 * @var Address $address
@@ -149,6 +156,27 @@ abstract class Payment {
 	 */
 	public function set_currency_code( string $currency_code ): self {
 		$this->currency_code = $currency_code;
+		return $this;
+	}
+
+	/**
+	 * Get the currency exponent.
+	 *
+	 * @return int
+	 */
+	public function get_currency_exponent(): int {
+		return $this->currency_exponent;
+	}
+
+	/**
+	 * Set the currency exponent.
+	 *
+	 * @param int $currency_exponent The currency exponent.
+	 *
+	 * @return self
+	 */
+	public function set_currency_exponent( int $currency_exponent ): self {
+		$this->currency_exponent = $currency_exponent;
 		return $this;
 	}
 

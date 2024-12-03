@@ -49,11 +49,15 @@ class PaymentTest extends TestCase {
 		$this->assertEquals( 100, $object->get_amount() );
 		$this->assertIsFloat( $object->get_amount() );
 
-		$this->assertInstanceOf( Payment::class, $object->set_currency( 'USD' ) );
-		$this->assertEquals( 'USD', $object->get_currency() );
+		$this->assertInstanceOf( Payment::class, $object->set_currency( 'BMD' ) );
+		$this->assertEquals( 'BMD', $object->get_currency() );
 
-		$this->assertInstanceOf( Payment::class, $object->set_currency_code( '840' ) );
-		$this->assertEquals( '840', $object->get_currency_code() );
+		$this->assertInstanceOf( Payment::class, $object->set_currency_code( '388' ) );
+		$this->assertEquals( '388', $object->get_currency_code() );
+
+		$this->assertInstanceOf( Payment::class, $object->set_currency_exponent( 4 ) );
+		$this->assertEquals( 4, $object->get_currency_exponent() );
+		$this->assertIsInt( $object->get_currency_exponent() );
 
 		$address = ( new Address() )->set_first_name( 'fname' );
 		$this->assertInstanceOf( Payment::class, $object->set_address( $address ) );
