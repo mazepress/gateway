@@ -52,6 +52,9 @@ class PaymentTest extends TestCase {
 		$this->assertInstanceOf( Payment::class, $object->set_currency( 'USD' ) );
 		$this->assertEquals( 'USD', $object->get_currency() );
 
+		$this->assertInstanceOf( Payment::class, $object->set_currency_code( '840' ) );
+		$this->assertEquals( '840', $object->get_currency_code() );
+
 		$address = ( new Address() )->set_first_name( 'fname' );
 		$this->assertInstanceOf( Payment::class, $object->set_address( $address ) );
 		$this->assertInstanceOf( Address::class, $object->get_address() );

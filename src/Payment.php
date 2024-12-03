@@ -40,6 +40,13 @@ abstract class Payment {
 	private $currency = 'USD';
 
 	/**
+	 * The currency code.
+	 *
+	 * @var string $currency_code
+	 */
+	private $currency_code = '840';
+
+	/**
 	 * The billing address.
 	 *
 	 * @var Address $address
@@ -121,6 +128,27 @@ abstract class Payment {
 	 */
 	public function set_currency( string $currency ): self {
 		$this->currency = $currency;
+		return $this;
+	}
+
+	/**
+	 * Get the currency code.
+	 *
+	 * @return string
+	 */
+	public function get_currency_code(): string {
+		return $this->currency_code;
+	}
+
+	/**
+	 * Set the currency code.
+	 *
+	 * @param string $currency_code The currency code.
+	 *
+	 * @return self
+	 */
+	public function set_currency_code( string $currency_code ): self {
+		$this->currency_code = $currency_code;
 		return $this;
 	}
 
