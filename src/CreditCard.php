@@ -22,11 +22,11 @@ class CreditCard {
 	private $type;
 
 	/**
-	 * The name.
+	 * The card holder.
 	 *
-	 * @var string $name
+	 * @var string $card_holder
 	 */
-	private $name;
+	private $card_holder;
 
 	/**
 	 * The number.
@@ -36,11 +36,18 @@ class CreditCard {
 	private $number;
 
 	/**
-	 * The expiry.
+	 * The expiry month.
 	 *
-	 * @var string $expiry
+	 * @var string $expiry_month
 	 */
-	private $expiry;
+	private $expiry_month;
+
+	/**
+	 * The expiry year.
+	 *
+	 * @var string $expiry_year
+	 */
+	private $expiry_year;
 
 	/**
 	 * The cvv.
@@ -71,23 +78,23 @@ class CreditCard {
 	}
 
 	/**
-	 * Get the name.
+	 * Get the card holder.
 	 *
 	 * @return string|null
 	 */
-	public function get_name(): ?string {
-		return $this->name;
+	public function get_card_holder(): ?string {
+		return $this->card_holder;
 	}
 
 	/**
-	 * Set the name.
+	 * Set the card holder.
 	 *
-	 * @param string $name The name.
+	 * @param string $card_holder The card holder.
 	 *
 	 * @return self
 	 */
-	public function set_name( string $name ): self {
-		$this->name = $name;
+	public function set_card_holder( string $card_holder ): self {
+		$this->card_holder = $card_holder;
 		return $this;
 	}
 
@@ -113,27 +120,6 @@ class CreditCard {
 	}
 
 	/**
-	 * Get the expiry.
-	 *
-	 * @return string|null
-	 */
-	public function get_expiry(): ?string {
-		return $this->expiry;
-	}
-
-	/**
-	 * Set the expiry.
-	 *
-	 * @param string $expiry The expiry.
-	 *
-	 * @return self
-	 */
-	public function set_expiry( string $expiry ): self {
-		$this->expiry = $expiry;
-		return $this;
-	}
-
-	/**
 	 * Get the cvv.
 	 *
 	 * @return string|null
@@ -151,6 +137,48 @@ class CreditCard {
 	 */
 	public function set_cvv( string $cvv ): self {
 		$this->cvv = $cvv;
+		return $this;
+	}
+
+	/**
+	 * Get the expiry month.
+	 *
+	 * @return string|null
+	 */
+	public function get_expiry_month(): ?string {
+		return $this->expiry_month;
+	}
+
+	/**
+	 * Set the expiry month.
+	 *
+	 * @param string $expiry_month The expiry month.
+	 *
+	 * @return self
+	 */
+	public function set_expiry_month( string $expiry_month ): self {
+		$this->expiry_month = $expiry_month;
+		return $this;
+	}
+
+	/**
+	 * Get the expiry year.
+	 *
+	 * @return string|null
+	 */
+	public function get_expiry_year(): ?string {
+		return $this->expiry_year;
+	}
+
+	/**
+	 * Set the expiry year.
+	 *
+	 * @param string $expiry_year The expiry year.
+	 *
+	 * @return self
+	 */
+	public function set_expiry_year( string $expiry_year ): self {
+		$this->expiry_year = $expiry_year;
 		return $this;
 	}
 }
