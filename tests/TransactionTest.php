@@ -42,5 +42,8 @@ class TransactionTest extends TestCase {
 
 		$this->assertInstanceOf( Transaction::class, $object->set_message( 'message' ) );
 		$this->assertEquals( 'message', $object->get_message() );
+
+		$this->assertInstanceOf( Transaction::class, $object->set_data( array('message') ) );
+		$this->assertEquals( array('message'), $object->get_data() );
 	}
 }

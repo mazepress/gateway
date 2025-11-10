@@ -50,6 +50,13 @@ class Transaction {
 	private $message;
 
 	/**
+	 * The transaction data.
+	 *
+	 * @var mixed $data
+	 */
+	private $data;
+
+	/**
 	 * Get the transaction ID.
 	 *
 	 * @return string|null
@@ -151,6 +158,27 @@ class Transaction {
 	 */
 	public function set_message( string $message ): self {
 		$this->message = $message;
+		return $this;
+	}
+
+	/**
+	 * Get the transaction data.
+	 *
+	 * @return mixed
+	 */
+	public function get_data() {
+		return $this->data;
+	}
+
+	/**
+	 * Set the transaction data.
+	 *
+	 * @param mixed $data The transaction data.
+	 *
+	 * @return self
+	 */
+	public function set_data( $data ): self {
+		$this->data = $data;
 		return $this;
 	}
 }
