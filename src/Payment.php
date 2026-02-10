@@ -21,49 +21,49 @@ abstract class Payment {
 	/**
 	 * The invoice ID.
 	 *
-	 * @var string $invoice_id
+	 * @var string
 	 */
 	private $invoice_id;
 
 	/**
 	 * The amount.
 	 *
-	 * @var float $amount
+	 * @var float
 	 */
 	private $amount = 0;
 
 	/**
 	 * The currency.
 	 *
-	 * @var string $currency
+	 * @var string
 	 */
 	private $currency = 'USD';
 
 	/**
 	 * The currency code.
 	 *
-	 * @var string $currency_code
+	 * @var string
 	 */
 	private $currency_code = '840';
 
 	/**
 	 * The currency exponent.
 	 *
-	 * @var int $currency_exponent
+	 * @var int
 	 */
 	private $currency_exponent = 2;
 
 	/**
 	 * The billing address.
 	 *
-	 * @var Address $address
+	 * @var Address
 	 */
 	private $address;
 
 	/**
 	 * The credit card.
 	 *
-	 * @var CreditCard $card
+	 * @var CreditCard
 	 */
 	private $card;
 
@@ -91,7 +91,7 @@ abstract class Payment {
 	 *
 	 * @return static
 	 */
-	public function set_invoice_id( string $invoice_id ): self {
+	public function set_invoice_id( string $invoice_id ): static {
 		$this->invoice_id = $invoice_id;
 		return $this;
 	}
@@ -112,7 +112,7 @@ abstract class Payment {
 	 *
 	 * @return static
 	 */
-	public function set_amount( float $amount ): self {
+	public function set_amount( float $amount ): static {
 		$this->amount = $amount;
 		return $this;
 	}
@@ -133,7 +133,7 @@ abstract class Payment {
 	 *
 	 * @return static
 	 */
-	public function set_currency( string $currency ): self {
+	public function set_currency( string $currency ): static {
 		$this->currency = $currency;
 		return $this;
 	}
@@ -154,7 +154,7 @@ abstract class Payment {
 	 *
 	 * @return static
 	 */
-	public function set_currency_code( string $currency_code ): self {
+	public function set_currency_code( string $currency_code ): static {
 		$this->currency_code = $currency_code;
 		return $this;
 	}
@@ -175,7 +175,7 @@ abstract class Payment {
 	 *
 	 * @return static
 	 */
-	public function set_currency_exponent( int $currency_exponent ): self {
+	public function set_currency_exponent( int $currency_exponent ): static {
 		$this->currency_exponent = $currency_exponent;
 		return $this;
 	}
@@ -196,7 +196,7 @@ abstract class Payment {
 	 *
 	 * @return static
 	 */
-	public function set_address( Address $address ): self {
+	public function set_address( Address $address ): static {
 		$this->address = $address;
 		return $this;
 	}
@@ -217,7 +217,7 @@ abstract class Payment {
 	 *
 	 * @return static
 	 */
-	public function set_card( CreditCard $card ): self {
+	public function set_card( CreditCard $card ): static {
 		$this->card = $card;
 		return $this;
 	}

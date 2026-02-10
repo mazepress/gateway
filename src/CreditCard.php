@@ -17,42 +17,42 @@ class CreditCard {
 	/**
 	 * The card type.
 	 *
-	 * @var string $type
+	 * @var string
 	 */
 	private $type;
 
 	/**
 	 * The card holder.
 	 *
-	 * @var string $card_holder
+	 * @var string
 	 */
 	private $card_holder;
 
 	/**
 	 * The number.
 	 *
-	 * @var string $number
+	 * @var string
 	 */
 	private $number;
 
 	/**
 	 * The expiry month.
 	 *
-	 * @var string $expiry_month
+	 * @var string
 	 */
 	private $expiry_month;
 
 	/**
 	 * The expiry year.
 	 *
-	 * @var string $expiry_year
+	 * @var string
 	 */
 	private $expiry_year;
 
 	/**
 	 * The cvv.
 	 *
-	 * @var string $cvv
+	 * @var string
 	 */
 	private $cvv;
 

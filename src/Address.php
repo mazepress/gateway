@@ -17,77 +17,77 @@ class Address {
 	/**
 	 * The first name.
 	 *
-	 * @var string $first_name
+	 * @var string
 	 */
 	private $first_name;
 
 	/**
 	 * The last name.
 	 *
-	 * @var string $last_name
+	 * @var string
 	 */
 	private $last_name;
 
 	/**
 	 * The email.
 	 *
-	 * @var string $email
+	 * @var string
 	 */
 	private $email;
 
 	/**
 	 * The phone.
 	 *
-	 * @var string $phone
+	 * @var string
 	 */
 	private $phone;
 
 	/**
 	 * The street address.
 	 *
-	 * @var string $address1
+	 * @var string
 	 */
 	private $address1;
 
 	/**
 	 * The address line 2.
 	 *
-	 * @var string $address2
+	 * @var string
 	 */
 	private $address2;
 
 	/**
 	 * The city.
 	 *
-	 * @var string $city
+	 * @var string
 	 */
 	private $city;
 
 	/**
 	 * The state.
 	 *
-	 * @var string $state
+	 * @var string
 	 */
 	private $state;
 
 	/**
 	 * The zip.
 	 *
-	 * @var string $zip
+	 * @var string
 	 */
 	private $zip;
 
 	/**
 	 * The country.
 	 *
-	 * @var string $country
+	 * @var string
 	 */
 	private $country;
 
 	/**
 	 * The country code.
 	 *
-	 * @var string $country_code
+	 * @var string
 	 */
 	private $country_code;
 

@@ -17,44 +17,44 @@ class Transaction {
 	/**
 	 * The transaction ID.
 	 *
-	 * @var string $transaction_id
+	 * @var string
 	 */
 	private $transaction_id;
 
 	/**
 	 * The reference ID.
 	 *
-	 * @var string $reference_id
+	 * @var string
 	 */
 	private $reference_id;
 
 	/**
 	 * The status.
 	 *
-	 * @var string $status
+	 * @var string
 	 */
 	private $status;
 
 	/**
 	 * The response code.
 	 *
-	 * @var string $code
+	 * @var string
 	 */
 	private $code;
 
 	/**
 	 * The response message.
 	 *
-	 * @var string $message
+	 * @var string
 	 */
 	private $message;
 
 	/**
 	 * The transaction data.
 	 *
-	 * @var mixed $data
+	 * @var array<mixed>
 	 */
-	private $data;
+	private $data = array();
 
 	/**
 	 * Get the transaction ID.
@@ -164,20 +164,20 @@ class Transaction {
 	/**
 	 * Get the transaction data.
 	 *
-	 * @return mixed
+	 * @return array<mixed>
 	 */
-	public function get_data() {
+	public function get_data(): array {
 		return $this->data;
 	}
 
 	/**
 	 * Set the transaction data.
 	 *
-	 * @param mixed $data The transaction data.
+	 * @param array<mixed> $data The transaction data.
 	 *
 	 * @return self
 	 */
-	public function set_data( $data ): self {
+	public function set_data( array $data ): self {
 		$this->data = $data;
 		return $this;
 	}
